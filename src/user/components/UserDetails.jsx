@@ -1,13 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import { user$$ } from '../state/user';
+import React from 'react';
+import { useUser } from '../react-hooks';
 // import {selectUserDetails} from '../state/selectors';
 
 export default function UserDetails(props){
-    const [user, setUser] = useState(null);
-    useEffect(() => {
-        const sub = user$$.subscribe(setUser);
-        return sub.unsubscribe
-    }, [])
+    const user = useUser();
     return (
         <h1>
             {

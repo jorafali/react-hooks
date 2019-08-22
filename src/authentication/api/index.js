@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Config from '../../config';
-import { from, of } from 'rxjs';
+import { from } from 'rxjs';
 import {tap, map, switchMap} from 'rxjs/operators';
 import { getUser } from '../../user/api';
 
